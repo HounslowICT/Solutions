@@ -1,0 +1,67 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TechITEasy App</title>
+        <link rel="stylesheet" href="https://fonts.google.com/share?query=sono">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Coiny&family=Sono:wght@200..800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'styles.css' %}" >
+    </head>
+    <body>
+        <div class="container">
+            <div class="head">
+                <div class="head-compo1">
+                    <div class="logos">
+                        <img src="{% static 'logo.png' %}" alt="ICT Knowledge Base Interface">
+                    </div> 
+                    <h1>ICT  Solutions</h1>      
+                    <button class="btn btn-large btn-form">Share a Solution</button>
+                    <p>🖥️</p>
+                </div>
+                <div class="head-compo2">
+                    <h2 style="margin-left: 80px;">Topics</h2><h2 class = "head2">Solutions</h2>
+                </div>
+            </div>            
+            <div class="mymain">  
+                <div class="options">
+                    <ul>
+                       {% for element in uniqueValues %}
+                                <li><button class="btn btn-categories action-button" onclick="navigateTo('{{ element }}')">{{ element }}</button></li>
+                       {% endfor %}
+                    </ul>
+                </div>      
+                <div class="seccion">
+                    <form class="fact-form hidden" id="form-sol" method="get">
+                        <input type="text/html" id= "solucion" name="solucion" placeholder="Share a Solution with Your Team...">
+                        <input type="text/html" id="fuente" name="fuente" placeholder="Enter source...">
+                        <select type="text/html" id="clasificacion" name="clasificacion">
+                            <option value="">Choose Category</option>
+                            <option value="Applications">Applications</option>
+                            <option value="Email">Email</option>
+                            <option value="Hardware">Hardware</option>
+                            <option value="Network">Network</option>
+                            <option value="VPN">VPN</option>
+                            <option value="Information">Information</option>
+                            <option value="Mobile Phones">Mobile Phones</option>
+                            <option value="Lenovo">Lenovo</option>
+                            <option value="SPDevice">SP Device</option>
+                            <option value="8x8">8x8</option>
+                        </select>
+                        <button type="button"  class="btn btn-large btn-post" onclick="sendToArray()">Post</button>
+                    </form>
+                    <ul>
+                        {% block content %}
+           
+                        {% endblock %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="{% static 'script.js' %}"></script>
+    </body>
+</html>

@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 10;
+    padding: 40px;
+    background-color: #18181b;
+    color: #fafaf9;
+    font-family: "Sono", Helvetica, monospace;    
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+.head {    
+    position: fixed;
+    display: block;
+    top: 0;
+    width: 98%;
+    background-color: #18181b;
+    padding: 10px 40px 4px;
+}
+
+
+.head-compo1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px 3px;
+}
+
+
+.head-compo2 {
+    display: flex;
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.head2 {
+    margin-left: 800px;
+}
+
+
+.mymain{
+    width: 100%;
+    margin-top: 220px;
+    display: flex; 
+    gap: 25px;
+}
+
+
+.options {
+    position: fixed;
+    top: 260px;
+    left: 65px;
+    padding-left: 20px;
+    width: 18%;
+    height: 550px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.seccion{
+    top: 220px;
+    margin-left: 350px;
+    width: 80%;
+    padding: 0px 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+
+.logos img {
+    width: 140px;
+    height: 140px;
+}
+
+
+@media (max-width: 900px) {
+    .main {
+        grid-template-columns: 1fr;
+    }
+}
+
+.logos {
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.fact-form {
+    background-color: #44403c;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-radius: 16px;
+}
+
+.fact-form input, .fact-form select {
+    background-color: #78716c;
+    border: none;
+    padding: 16px;
+    font-size: 18px;
+    color: inherit;
+}
+
+.fact-form input::placeholder {
+    color: #a8a29e;
+}
+
+.fact-form input:first-child{
+    flex-grow: 1;
+}
+
+.fact-form span {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 50px;
+    font-family: "Sono", Helvetica, monospace;
+    color: #f3f4f6;
+    margin-left: 15px;
+    line-height: 1;
+}
+
+.fact {
+        display:flex;
+        justify-content: space-between;
+        font-size: 16px;
+        line-height: 1.4;
+        font-family: Helvetica, Arial, sans-serif;
+        background-color: #44403c;
+        color: #f3f4f6;
+        margin-bottom: 16px;
+        padding: 15px 24px;
+        border: 1px, solid rgb(208, 195, 195);    
+        gap: 5px;
+        border-radius: 16px;
+}
+
+.tag {
+    width: 10%;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #3be9f2;
+}
+
+.texto {
+    width: 83%;
+}
+
+.source{
+    width: 3%;
+    font-size: 13px;
+}
+
+.votation {
+    width: 2%;
+    margin-right: 20px;
+    padding: 5px;
+    flex-shrink: 0;
+    display: flex;
+    gap: 5px;
+}
+
+
+ul {
+    list-style: none;
+}
+
+
+.votation button {
+            margin-left: auto;
+            padding: 2px;
+            background-color: #78716c;
+            color: inherit;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.8s;
+}
+
+.votation button:hover{
+    background-color: #292524;
+}
+
+.source:visited, .source:link {
+    color: #f57f5b;
+    text-decoration: none;
+    margin-left: 10px;
+    transition: 0.4s;
+}
+
+.source:hover, .source:active {
+    color: #ffffff;
+}
+
+.btn {
+    border: none;
+    margin: 3px;
+    font-family: "Coiny";
+    line-height: 1;
+    text-transform: uppercase;
+    font-size: 17px;
+    padding: 12px 10px;
+    cursor: pointer;
+    background-image: linear-gradient(to right, rgb(75, 75, 207), #e8b92b);
+    transition: 0.6s;
+    color: inherit;
+}
+
+.btn:hover {
+    transform: scale(115%) /*rotate(-2deg)*/;
+}
+
+.btn-large {
+    font-size: 17px;
+    padding: 15px 20px;
+    border-radius: 30px;
+
+}
+
+.btn-categories{
+    width: 80%;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.btn-form {
+    display: none;
+}
+
+
+@media (max-width: 500px){
+    body {
+        padding: 10px 70px;
+    }
+}
+
+        
+@media (max-width: 1900px) {
+    body {
+        padding: 50px 25px;
+    }
+
+    .options {
+        position: fixed;
+        top: 260px;
+        left: 50px;
+        width: 23%;
+        height: 450px;
+    }
+
+    .head2 {
+        margin-left: 500px;
+    }
+
+    .seccion{
+        margin-left: 320px;
+        width: 75%;
+        padding: 0px 20px;
+    }
+
+    .tag {
+        width: 15%;
+        padding-right: 10px;
+    }
+
+    .votation {
+        width: 2%;
+        margin-right: 40px;
+        padding: 6px;
+        flex-shrink: 0;
+        display: flex;
+        gap: 5px;
+    }
+    
+    .fact-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .fact-form input, .fact-form select {
+        width: auto;
+    }
+}

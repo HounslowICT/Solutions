@@ -1,0 +1,18 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+{% for solution in dataFromsolutions %}
+    <li  class="fact"> 
+        <p class="tag">{{ solution.slug}}</p>
+        {% if solution.link == 'None' %}
+           <p class="texto">{{solution.solution}}</p>
+        {% else %}  
+           <p class="texto">{{solution.solution}}<a class="source" href="{{ solution.link}}" target="_blank">... More.</a></p>
+        {% endif %}                            
+        <div class="votation">
+            <button>👍 <strong></strong></button> 
+            <button>⛔ <strong></strong></button>
+        </div>
+    </li>
+{% endfor %}   
+{% endblock %}              
