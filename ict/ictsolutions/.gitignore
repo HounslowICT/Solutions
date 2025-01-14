@@ -1,0 +1,23 @@
+# Virtual environment
+env/
+venv/
+
+# Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Static files
+staticfiles/
+static/
+
+# Logs
+*.log
+
+# Configuration files
+.env
+.ict
+.DS_Store
+.vscode/
+.idea/
