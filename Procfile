@@ -1,1 +1,1 @@
-web: gunicorn ictsolutions.wsgi --log-file -
+web: gunicorn ictsolutions.wsgi:application --log-file -
